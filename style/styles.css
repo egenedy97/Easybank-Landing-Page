@@ -1,3 +1,8 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+  }
 /* missing normalization and webkit */
 .footer {
     display: flex;
@@ -10,10 +15,38 @@
 }
 
 .Container{
-    background-color: yellow;
     width: 85%;
     height: 100%;
     display: flex;
     align-items: center;
+}
+
+/* missing media query for mobile */
+.SocialAndLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-between;
+    min-height: 120px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialMedia{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+
+}
+
+.socialItem{
+    min-width: 40px;
 }
 
