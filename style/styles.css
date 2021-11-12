@@ -1,19 +1,219 @@
-/* missing normalization and webkit */
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    background-color: #2d314e;
-    min-height: 200px;
-    width:100%;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.Container{
-    background-color: yellow;
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d314e;
+  min-height: 200px;
+  width: 100%;
+  flex-direction: row;
+}
+
+@media (min-width: 0px) {
+  .Container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .linkedLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    
+  }
+  .listLinks {
+    list-style: none;
+    display: flex ; 
+    flex-direction: column;
+    text-align: flex-start;
+    justify-content: space-between;
+  }
+
+  .rightReservedAndInvite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .SocialAndLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+  .logo {
+    display: block;
+    margin:0 15px ;
+  }
+  
+.listLinks > li {
+    color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+  
+}
+
+@media (min-width: 768px) {
+  .Container {
     width: 85%;
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .linkedLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: space-between;
+  }
+
+  .listLinks {
+    list-style: none;
+    display: grid ; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3 , 1fr);
+  }
+  .rightReservedAndInvite {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .SocialAndLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 120px;
+}
+
+  .logo {
+    display: block;
+    margin:0 10px ;
+  }
+  
+.listLinks > li {
+    color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+  }
+  
+  
+}
+
+@media (min-width: 1025px) {
+  .Container {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .linkedLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: space-between;
+  }
+
+  .rightReservedAndInvite {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .SocialAndLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 120px;
+}
+.listLinks {
+    list-style: none;
+    display: grid ; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3 , 1fr);
+  }
+  .logo {
+    display: block;
+    margin:0 10px ;
+  }
+
+  
+.listLinks > li {
+    color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+  }
+ 
+  
+}
+/* missing media query for mobile */
+
+
+.socialMedia {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0; /*throw an error padding 40 without editing */
+  width: 100%;
+}
+
+svg > path:hover {
+  fill: #37dd78;
+}
+
+.requestBtn {
+  background: #11998e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #38ef7d,
+    #11998e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #38ef7d,
+    #11998e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border-radius: 50px;
+  width: 180px;
+  color: #fff;
+  border: 0px;
+  min-height: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.copyRights {
+  color: rgb(148, 147, 147);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.listLinks > li:hover {
+  color: #37dd78;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
